@@ -1,0 +1,234 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+:root {
+    --font-color: #000000;
+    --font-color-active: #ffffff;
+
+    --font-secondary-color: rgb(0 0 0 / 65%);
+    --background-color: #eaf8ff;
+    --background-color-active: #000000;
+    --border-color: #000000;
+    --font-muted-color: #808080;
+    --font-size: 0.9375rem;
+    --font-secondary-size: 2rem;
+}
+
+/*override boostrap:start*/
+.btn-dark {
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #ffffff;
+}
+/*override boostrap:end*/
+
+.page-link.active-button{
+    color: var(--f-pagination-active-color);
+    background-color: var(--f-pagination-active-bg);
+    border-color: var(--f-pagination-active-border-color);
+}
+
+
+.navbar-custom .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+/*.navbar-custom .dropdown-submenu {*/
+/*    position: relative;*/
+/*}*/
+
+.navbar-custom .dropdown-submenu > .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    height: 100%;
+}
+.navbar-custom .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+.subject-dropdown .dropdown-menu {
+    width: 360px;
+}
+.subject-dropdown .subject-image {
+    background: var(--background-color);
+    width: 40px;
+    height: 40px;
+}
+.child-subjects {
+    background: #f5f7f8;
+}
+.navbar-custom .main-subjects.show {
+    top: 65px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /*box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;*/
+
+}
+.main-subjects {
+    animation-duration: 0.3s;
+}
+@keyframes DropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.DropdownFade{
+    animation-name: DropdownFade;
+}
+
+.search-form .search-bar{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.search-input {
+    font-family: 'poppins', sans-serif;
+    font-size: 14px;
+    color: rgb(0 0 0 / 55%);
+}
+
+/*.foy-navbar#navbarNav {*/
+/*    justify-content: space-between;*/
+/*}*/
+.logo-subtitle{
+    color: #444445;
+    font-size: 10px;
+}
+.foy-navbar.collapse.show, .foy-navbar.collapsing {
+    padding: 20px;
+    z-index: 9;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.subject-dropdown .main-subject-name {
+    color: var(--font-secondary-color);
+    font-size: 15px;
+}
+
+span.subject-course-count {
+    font-size: 12px;
+    color: var(--font-muted-color);
+}
+.main_wrapper {
+    transition: filter 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.main_wrapper.blurred {
+    filter: blur(6px);
+    transform: scaleX(0.996);
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+}
+.main_wrapper.overlay {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .1s linear;
+}
+.icon-dark {
+    color: #000000;
+}
+.icon-light {
+    color: #ffffff;
+}
+.navbar-custom {
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    background-color: #fff;
+}
+
+.logo-image{
+    height: 50px;
+    width: 100px;
+}
+.course-card .course-overview {
+    min-height: 48px;
+    font-weight: 400;
+    font-size: 13px;
+}
+.course-card .course-title {
+    min-height: 48px;
+}
+.card.course-card {
+    border: 1px solid #f1f1f1;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+}
+
+.navbar-custom .dropdown-toggle {
+    display: flex;
+    justify-content: space-between; /* Ensures the text and icon are spaced */
+    align-items: center;
+}
+.navbar-custom .dropdown-toggle::after {
+    display: none; /* Hide Bootstrap's default arrow */
+}
+/*.dropdown-toggle::after {*/
+/*    font-family: "Font Awesome 5 Free";*/
+/*    content: "\f105";*/
+/*    font-weight: 900;*/
+/*    margin-left: auto;*/
+/*}*/
+
+
+#scrollUp.active {
+    top: calc(100% - 110px);
+}
+#scrollUp {
+    position: fixed;
+    right: 2%;
+    top: 100%;
+    width: 28px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    border: 2px solid var(--border-color);
+    color: var(--border-color);
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 100px;
+    z-index: 999;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+}
+
+
+footer{
+    margin-top:30px;
+    display:flex;
+    padding:20px;
+    justify-content:space-evenly;
+    align-items:center;
+    background-color:#B0DFEA;
+}
+footer a{
+    color:#20496a;
+}
+footer a i{
+    transition:0.2s;
+}
+footer a:nth-of-type(3),footer a:nth-of-type(4), footer a:nth-of-type(5){
+    font-size:1.3rem;}
+footer a i:hover{
+    transform:translateY(-10px);
+}
