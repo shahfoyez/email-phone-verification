@@ -2,7 +2,7 @@
 
 - Clone the repository with `git clone`
 - Copy `.env.example` file to `.env` and edit database credentials there
-- Run `composer install`
+- Run `composer update`
 - Run `php artisan key:generate`
 - Run `php artisan migrate`
 - That's it: launch the main URL and click `Register` on the top-right
